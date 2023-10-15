@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  --scrollbarBG: #fff2dd;
+  --thumbBG: #cc6968;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 100%;
+  border: 3px solid var(--scrollbarBG);
+}
+
+html {
+  background: lightgrey;
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  overflow-y: auto;
+}
+
